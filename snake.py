@@ -6,12 +6,21 @@ class Snake():
 
     def __init__(self):
         self.snakes=[]
-        self.create_snake()       
+        self.create_snake()  
+
+    def newsnake(self):
+        self.snakes=[]
+        self.create_snake()   
 
     def create_snake(self):
         for position in POSTIONS:
             self.add_snake(position)
             
+    def deletesnake(self):
+        for i in self.snakes:
+            i.goto(700,700)
+        
+        
     def add_snake(self, position):
         new_snake=Turtle("square")
         new_snake.color("white")
